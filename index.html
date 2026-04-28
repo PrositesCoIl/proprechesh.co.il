@@ -1076,6 +1076,56 @@
         height: 52px;
       }
     }
+    @media (max-width: 640px) {
+  .image-card {
+    overflow: visible;
+  }
+
+  .image-card img,
+  .gallery-main img,
+  .gallery-side img {
+    width: 100%;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    aspect-ratio: auto;
+    object-fit: contain;
+    display: block;
+  }
+
+  .image-caption {
+    position: static;
+    margin-top: 12px;
+    border-radius: 14px;
+    box-shadow: none;
+    background: #ffffff;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .gallery-side {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .gallery-main,
+  .gallery-side,
+  .gallery-side img,
+  .gallery-main img {
+    position: relative;
+    z-index: 1;
+  }
+
+  .split,
+  .property-band {
+    gap: 28px;
+  }
+}
   </style>
 
   <script type="application/ld+json">
