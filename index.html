@@ -77,33 +77,93 @@ font-family: "Rubik", Arial, Helvetica, sans-serif;
       height: auto;
     }
 
-   h1,
+h1,
 h2,
 h3,
 h4 {
   margin: 0 0 18px;
   font-family: "Rubik", Arial, Helvetica, sans-serif;
-  line-height: 1.18;
-  font-weight: 800;
-  letter-spacing: -0.015em;
+  line-height: 1.22;
+  font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
 h1 {
-  font-size: clamp(2.15rem, 4vw, 4.05rem);
+  font-size: clamp(2.05rem, 3.35vw, 3.35rem);
   color: var(--white);
-  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.28);
+  font-weight: 700;
+  line-height: 1.24;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.26);
 }
 
 h2 {
-  font-size: clamp(1.75rem, 2.7vw, 2.55rem);
+  font-size: clamp(1.65rem, 2.35vw, 2.35rem);
   color: var(--dark-2);
-  font-weight: 700;
+  font-weight: 650;
 }
 
 h3 {
-  font-size: clamp(1.28rem, 2vw, 1.62rem);
+  font-size: clamp(1.22rem, 1.75vw, 1.52rem);
+  color: var(--dark-2);
+  font-weight: 650;
+}
+
+.hero-lead {
+  font-size: clamp(1.02rem, 1.45vw, 1.18rem);
+  max-width: 720px;
+  color: rgba(255, 255, 255, 0.94);
+  margin-bottom: 26px;
+  font-weight: 500;
+  line-height: 1.85;
+}
+
+.hero-card h2 {
+  font-size: clamp(1.28rem, 1.8vw, 1.65rem);
+  margin-bottom: 12px;
   color: var(--dark-2);
   font-weight: 700;
+  border-right: 7px solid var(--yellow);
+  padding-right: 14px;
+}
+
+.main-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 10px 14px;
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: 700;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.brand-text strong {
+  font-size: 1.04rem;
+  color: var(--white);
+  font-family: "Rubik", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+.brand-text span {
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.84);
+  font-family: "Rubik", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
+
+.eyebrow {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 10px;
+  color: #111;
+  background: var(--yellow);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  box-shadow: 0 14px 28px rgba(255, 242, 0, 0.2);
 }
     p {
       margin: 0 0 18px;
