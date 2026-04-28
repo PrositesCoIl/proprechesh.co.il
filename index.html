@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>רכש נכסים | נדל״ן מסחרי בכפר סבא והסביבה</title>
+  <title>רכש נכסים | נדל"ן מסחרי בכפר סבא והסביבה</title>
   <meta name="description" content="רכש נכסים מתמחה בתיווך נדל״ן מסחרי בכפר סבא והסביבה: משרדים, חנויות, מבני תעשייה, קליניקות ומחסנים בליווי מקצועי משנת 1994.">
 
   <meta name="robots" content="index, follow">
@@ -18,12 +18,12 @@
   <style>
     :root {
       --dark: #4c4d4f;
-      --dark-2: #38393b;
+      --dark-2: #343537;
       --yellow: #fff200;
       --yellow-2: #ede349;
       --white: #ffffff;
-      --text: #222222;
-      --muted: #5d5d5d;
+      --text: #202020;
+      --muted: #575757;
       --soft: #f7f7f2;
       --border: rgba(76, 77, 79, 0.16);
       --shadow: 0 18px 45px rgba(0, 0, 0, 0.13);
@@ -50,7 +50,7 @@
       background: var(--white);
     }
 
-    body.no-scroll {
+    body.menu-open {
       overflow: hidden;
     }
 
@@ -61,7 +61,8 @@
     }
 
     a:focus-visible,
-    button:focus-visible {
+    button:focus-visible,
+    summary:focus-visible {
       outline: 4px solid var(--yellow);
       outline-offset: 4px;
       border-radius: 12px;
@@ -78,24 +79,30 @@
     h3,
     h4 {
       margin: 0 0 18px;
-      line-height: 1.25;
-      font-weight: 800;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.22;
+      font-weight: 900;
       letter-spacing: -0.02em;
     }
 
     h1 {
-      font-size: clamp(2.15rem, 4.2vw, 4rem);
+      font-size: clamp(2.3rem, 4.4vw, 4.35rem);
       color: var(--white);
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.28);
     }
 
     h2 {
-      font-size: clamp(1.7rem, 2.7vw, 2.55rem);
+      font-size: clamp(1.85rem, 2.9vw, 2.8rem);
       color: var(--dark-2);
     }
 
     h3 {
-      font-size: clamp(1.25rem, 2vw, 1.65rem);
+      font-size: clamp(1.32rem, 2vw, 1.72rem);
       color: var(--dark-2);
+    }
+
+    h4 {
+      font-size: 1.2rem;
     }
 
     p {
@@ -111,7 +118,7 @@
       color: #000;
       padding: 12px 18px;
       border-radius: 12px;
-      font-weight: 800;
+      font-weight: 900;
       transition: top 0.2s ease;
     }
 
@@ -148,7 +155,6 @@
       gap: 12px;
       text-decoration: none;
       font-weight: 900;
-      letter-spacing: -0.01em;
     }
 
     .brand-mark {
@@ -171,11 +177,14 @@
     .brand-text strong {
       font-size: 1.08rem;
       color: var(--white);
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 900;
     }
 
     .brand-text span {
       font-size: 0.95rem;
-      color: rgba(255, 255, 255, 0.82);
+      color: rgba(255, 255, 255, 0.84);
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     .nav-toggle {
@@ -215,7 +224,7 @@
       color: var(--white);
       text-decoration: none;
       border-radius: 999px;
-      font-weight: 700;
+      font-weight: 800;
       transition: background 0.2s ease, color 0.2s ease;
     }
 
@@ -228,7 +237,7 @@
       position: relative;
       isolation: isolate;
       background:
-        linear-gradient(115deg, rgba(56, 57, 59, 0.94), rgba(56, 57, 59, 0.72)),
+        linear-gradient(115deg, rgba(56, 57, 59, 0.95), rgba(56, 57, 59, 0.74)),
         url("gemini-140126-נכסים.jpg") center / cover no-repeat;
       min-height: 760px;
       display: grid;
@@ -271,8 +280,9 @@
     .hero-lead {
       font-size: clamp(1.08rem, 1.7vw, 1.32rem);
       max-width: 760px;
-      color: rgba(255, 255, 255, 0.93);
+      color: rgba(255, 255, 255, 0.94);
       margin-bottom: 26px;
+      font-weight: 500;
     }
 
     .hero-actions,
@@ -296,6 +306,7 @@
       border: 2px solid transparent;
       transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
       cursor: pointer;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     .btn:hover {
@@ -319,6 +330,12 @@
       color: var(--white);
     }
 
+    .footer-actions .btn-yellow {
+      background: var(--yellow);
+      color: #ffffff;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+    }
+
     .hero-card {
       background: rgba(255, 255, 255, 0.96);
       color: var(--text);
@@ -329,8 +346,11 @@
     }
 
     .hero-card h2 {
-      font-size: 1.55rem;
+      font-size: 1.65rem;
       margin-bottom: 12px;
+      color: var(--dark-2);
+      border-right: 7px solid var(--yellow);
+      padding-right: 14px;
     }
 
     .rating-card {
@@ -392,6 +412,7 @@
       color: var(--dark);
       font-weight: 900;
       margin-bottom: 12px;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     .section-head {
@@ -402,6 +423,27 @@
     .section-head.center {
       text-align: center;
       margin-inline: auto;
+    }
+
+    .section-head h2 {
+      position: relative;
+      padding-bottom: 16px;
+    }
+
+    .section-head h2::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 86px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--yellow);
+    }
+
+    .section-head.center h2::after {
+      right: 50%;
+      transform: translateX(50%);
     }
 
     .section-head p {
@@ -446,7 +488,7 @@
       color: var(--text);
       border-radius: 18px;
       padding: 14px 16px;
-      font-weight: 800;
+      font-weight: 900;
       box-shadow: 0 12px 24px rgba(0, 0, 0, 0.14);
     }
 
@@ -569,12 +611,13 @@
     }
 
     .property-chip {
-      background: var(--soft);
+      background: var(--white);
       border: 1px solid var(--border);
       border-radius: 999px;
       padding: 11px 16px;
-      font-weight: 800;
+      font-weight: 900;
       color: var(--dark-2);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.04);
     }
 
     .process-wrap {
@@ -647,15 +690,12 @@
 
     .review-card p {
       margin-bottom: 16px;
+      white-space: pre-line;
     }
 
     .review-name {
       font-weight: 900;
       color: var(--dark);
-    }
-
-    .dark .review-name {
-      color: var(--yellow);
     }
 
     .faq-list {
@@ -670,6 +710,7 @@
       font-weight: 900;
       color: var(--dark-2);
       list-style-position: inside;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     .faq-item p {
@@ -717,6 +758,8 @@
       color: var(--yellow);
       font-size: 1.24rem;
       margin-bottom: 14px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 900;
     }
 
     .footer-col p,
@@ -945,7 +988,9 @@
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.7",
-      "bestRating": "5"
+      "bestRating": "5",
+      "ratingCount": "37",
+      "reviewCount": "37"
     }
   }
   </script>
@@ -989,10 +1034,18 @@
       },
       {
         "@type": "Question",
-        "name": "האם רכש נכסים מלווה גם בעלי נכסים?",
+        "name": "איך יודעים איזה נכס מסחרי מתאים לעסק?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "כן. רכש נכסים מלווה בעלי נכסים בתהליכי השכרה, מכירה, שיווק נכסים מסחריים, איתור שוכרים מתאימים וניהול תהליך העסקה בצורה מקצועית ומסודרת."
+          "text": "מתחילים בהגדרת צרכים ברורה: סוג הפעילות, גודל השטח, תקציב, גישה, חניה, פריקה וטעינה, קהל יעד, מספר עובדים ותוכניות התפתחות. לאחר מכן בוחנים נכסים מתאימים לפי הנתונים בפועל."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "האם ניתן לקבל ליווי גם בתהליך משא ומתן?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "כן. רכש נכסים מלווה את הלקוח גם בשלבי המשא ומתן, בתיאום הציפיות מול הצדדים ובקידום התהליך עד לסגירת העסקה."
         }
       }
     ]
@@ -1037,7 +1090,7 @@
       <div class="container hero-grid">
         <div>
           <span class="eyebrow">משנת 1994 באזורי התעשייה של כפר סבא</span>
-          <h1 id="hero-title">רכש נכסים — כתובת מקצועית לנכסים מסחריים בכפר סבא והסביבה</h1>
+          <h1 id="hero-title">רכש נכסים הכתובת לנדל"ן מסחרי בכפר סבא והסביבה</h1>
           <p class="hero-lead">
             רכש נכסים מתמחה בתיווך, השכרה ומכירה של נדל״ן מסחרי: משרדים, חנויות, משרדי הייטק, מבני תעשייה, קליניקות, מחסנים ונכסים להשקעה. העבודה מתבססת על ניסיון רב שנים, היכרות עמוקה עם השטח, קשרים עסקיים וליווי ענייני שמטרתו להתאים לכל עסק את הנכס הנכון עבורו.
           </p>
@@ -1067,21 +1120,21 @@
       <div class="container split">
         <div>
           <span class="section-kicker">מי עומד מאחורי רכש נכסים</span>
-          <h2 id="about-title">משרד תיווך נדל״ן מסחרי שמכיר את כפר סבא לא רק מהמפה, אלא מהשטח</h2>
+          <h2 id="about-title">משרד תיווך שמכיר את כפר סבא מהשטח העסקי</h2>
           <p>
             רכש נכסים היא מהכתובות הוותיקות והבולטות בתחום הנדל״ן המסחרי באזורי התעשייה של כפר סבא. המשרד פעיל משנת 1994 ומלווה עסקים, בעלי נכסים, חברות וגופים מסחריים בתהליכי השכרה, מכירה, השקעה ואכלוס נכסים.
           </p>
           <p>
-            העבודה של רכש נכסים אינה מסתכמת בהצגת נכס. היא מתחילה בהבנת הצורך העסקי: איזה סוג פעילות עומדת להתבצע במקום, כמה עובדים צפויים להשתמש במשרד, האם נדרשת גישה לפריקה וטעינה, האם יש צורך בחזית מסחרית, מה רמת הנגישות הנדרשת, ומהם התנאים שיאפשרו לעסק לפעול בצורה יעילה לאורך זמן.
+            העבודה של רכש נכסים מתחילה בהבנת הצורך העסקי: איזה סוג פעילות עומדת להתבצע במקום, כמה עובדים צפויים להשתמש במשרד, האם נדרשת גישה לפריקה וטעינה, האם יש צורך בחזית מסחרית, מה רמת הנגישות הנדרשת, ומהם התנאים שיאפשרו לעסק לפעול בצורה יעילה לאורך זמן.
           </p>
           <p>
-            לאורך השנים ליווה המשרד מגוון רחב של לקוחות ובהם בנקים, מרפאות, משרדי עורכי דין, סוכנויות ביטוח, חברות הייטק, מוסכים, עסקים בתחום האחסנה והלוגיסטיקה, מסעדות, חדרי כושר, קייטרינג, חנויות, אולמות אירועים, חברות ליסינג ועסקים נוספים. הניסיון הרחב מאפשר לרכש נכסים להבין את ההבדל בין נכס שנראה מתאים על הנייר לבין נכס שבאמת מתאים לפעילות העסקית בפועל.
+            לאורך השנים ליווה המשרד מגוון רחב של לקוחות ובהם בנקים, מרפאות, משרדי עורכי דין, סוכנויות ביטוח, חברות הייטק, מוסכים, עסקים בתחום האחסנה והלוגיסטיקה, מסעדות, חדרי כושר, קייטרינג, חנויות, אולמות אירועים, חברות ליסינג ועסקים נוספים. הניסיון הרחב מאפשר לרכש נכסים לזהות את ההבדל בין נכס שנראה מתאים על הנייר לבין נכס שמתאים לפעילות העסקית בפועל.
           </p>
         </div>
 
         <figure class="image-card">
           <img src="28.4.26 משרד.jpg" alt="משרד עסקי מואר עם חלונות גדולים ונוף עירוני" loading="lazy">
-          <figcaption class="image-caption">התאמת נכס לפי צרכים עסקיים, לא לפי שטח בלבד</figcaption>
+          <figcaption class="image-caption">התאמת נכס לפי צרכים עסקיים, שימוש בפועל ותנאי שטח</figcaption>
         </figure>
       </div>
     </section>
@@ -1128,12 +1181,12 @@
       <div class="container property-band">
         <div>
           <span class="section-kicker">נכסים לעסקים, חברות ומשקיעים</span>
-          <h2 id="properties-title">מבחר רחב של נכסים מסחריים — מהצורך הקטן ועד העסקה המורכבת</h2>
+          <h2 id="properties-title">מבחר רחב של נכסים מסחריים בכפר סבא והסביבה</h2>
           <p>
             רכש נכסים מתווכת ומלווה עסקאות של נדל״ן מסחרי במגוון רחב של שטחים ושימושים. לצד משרדים קטנים, משרדים זולים ונכסים המתאימים לעסקים בתחילת הדרך, ניתן למצוא גם משרדי הייטק, חנויות, קליניקות, מחסנים, מבני תעשייה, נכסים להשקעה, מגרשים ונכסים המיועדים לעסקים בעלי צורכי תפעול מורכבים יותר.
           </p>
           <p>
-            כאשר עסק מחפש משרד, חנות או נכס מסחרי, השאלה אינה רק כמה מטרים קיימים בנכס. נדרש להבין האם המיקום מתאים ללקוחות, האם סביבת העבודה תואמת את אופי העסק, האם יש אפשרות לפריקה וטעינה, האם הנכס מתאים למספר העובדים, האם צפויה התרחבות, ומהם התנאים הנדרשים להפעלה שוטפת ונוחה.
+            כאשר עסק מחפש משרד, חנות או נכס מסחרי, השאלה המרכזית היא התאמה: האם המיקום מתאים ללקוחות, האם סביבת העבודה תואמת את אופי העסק, האם יש אפשרות לפריקה וטעינה, האם הנכס מתאים למספר העובדים, האם צפויה התרחבות, ומהם התנאים הנדרשים להפעלה שוטפת ונוחה.
           </p>
           <p>
             מי שמחפש <a class="yellow-link" href="https://proprechesh.co.il/category/%D7%9E%D7%A9%D7%A8%D7%93%D7%99%D7%9D-%D7%9C%D7%94%D7%A9%D7%9B%D7%A8%D7%94-%D7%91%D7%9B%D7%A4%D7%A8-%D7%A1%D7%91%D7%90/" title="מעבר לעמוד משרדים להשכרה בכפר סבא באתר רכש נכסים">משרדים להשכרה בכפר סבא</a> יכול להיעזר בהיכרות של רכש נכסים עם השוק המקומי, עם בעלי הנכסים ועם האפשרויות הקיימות באזור.
@@ -1154,7 +1207,7 @@
         <aside class="highlight-box">
           <h3>למה התאמה מקצועית חשובה?</h3>
           <p>
-            נכס מסחרי טוב צריך להתאים לעסק גם ביום הכניסה וגם בהמשך הדרך. משרד קטן מדי, חנות במיקום שאינו מתאים לקהל היעד, מחסן ללא גישה נוחה או קליניקה שאינה מתאימה לאופי השירות — כל אלה עלולים להשפיע על התפעול ועל חוויית הלקוחות.
+            נכס מסחרי טוב צריך להתאים לעסק גם ביום הכניסה וגם בהמשך הדרך. משרד קטן מדי, חנות במיקום שאינו מתאים לקהל היעד, מחסן ללא גישה נוחה או קליניקה שאינה מתאימה לאופי השירות - כל אלה עלולים להשפיע על התפעול ועל חוויית הלקוחות.
           </p>
           <p>
             רכש נכסים שמה דגש על התאמה מדויקת, בדיקה עניינית של האפשרויות וליווי שמאפשר ללקוח לקבל החלטה מבוססת יותר.
@@ -1169,7 +1222,7 @@
           <span class="section-kicker">סביבת עבודה ונכסים מסחריים</span>
           <h2 id="gallery-title">הנכס הנכון מתחיל בהבנה של השימוש בפועל</h2>
           <p>
-            משרד, חנות, קליניקה או מבנה תעשייה אינם רק כתובת. הם חלק מהפעילות העסקית. לכן תהליך הבחירה חייב לשלב בין מיקום, התאמה תפעולית, תדמית, תקציב ונוחות.
+            משרד, חנות, קליניקה או מבנה תעשייה הם חלק מהפעילות העסקית. לכן תהליך הבחירה משלב בין מיקום, התאמה תפעולית, תדמית, תקציב ונוחות.
           </p>
         </div>
 
@@ -1191,7 +1244,7 @@
           <span class="section-kicker">תהליך עבודה מסודר</span>
           <h2 id="process-title">כך רכש נכסים מלווה לקוחות בתהליך השכרה או מכירה</h2>
           <p>
-            תהליך מסודר מאפשר לצמצם אי־ודאות, להבין את האפשרויות בצורה ברורה, ולבחון את הנכס לא רק לפי מראה או מיקום, אלא לפי התאמתו לפעילות העסקית.
+            תהליך מסודר מאפשר לצמצם אי ודאות, להבין את האפשרויות בצורה ברורה, ולבחון את הנכס לפי התאמתו לפעילות העסקית.
           </p>
         </div>
 
@@ -1223,33 +1276,6 @@
       </div>
     </section>
 
-    <section class="section" aria-labelledby="clients-title">
-      <div class="container split">
-        <figure class="image-card">
-          <img src="gemini-140126-נכסים.jpg" alt="בניין מסחרי מודרני באזור עסקים" loading="lazy">
-          <figcaption class="image-caption">ניסיון רב שנים באכלוס, השכרה ומכירה של נכסים מסחריים</figcaption>
-        </figure>
-
-        <div>
-          <span class="section-kicker">לקוחות ותחומי פעילות</span>
-          <h2 id="clients-title">מענה לעסקים קטנים, חברות, בעלי נכסים ומשקיעים</h2>
-          <p>
-            רכש נכסים מתאימה את אופי הליווי לסוג הלקוח ולמטרת העסקה. בעל עסק שמחפש משרד קטן אינו זקוק לאותו תהליך כמו חברה שמחפשת שטח גדול יותר, ובעל נכס שמעוניין להשכיר נכס מסחרי זקוק לבחינה שונה ממשקיע שמחפש נכס מניב.
-          </p>
-          <p>
-            המשרד פועל מתוך הבנה שלכל עסקה יש מאפיינים משלה: מיקום, חשיפה, גישה, שימושים, תקציב, גמישות חוזית, מצב הנכס, התאמות נדרשות, זמינות כניסה, קהל יעד ויכולת העסק להתפתח במקום לאורך זמן.
-          </p>
-          <p>
-            לצד הליווי השוטף, רכש נכסים משמשת עבור לקוחות רבים כגורם מקצועי שמכיר את השוק המקומי, מבין את הדינמיקה בין בעלי נכסים לשוכרים, ויודע להוביל תהליך ענייני גם כאשר נדרשת גמישות, סבלנות או פתרון יצירתי כדי להביא את הצדדים להסכמה.
-          </p>
-          <p>
-            ניתן לעקוב אחר עדכונים ופרסומים גם בעמוד הפייסבוק של החברה:
-            <a href="https://www.facebook.com/proprechesh/?locale=he_IL" title="מעבר לעמוד הפייסבוק של רכש נכסים" target="_blank" rel="noopener">רכש נכסים בפייסבוק</a>.
-          </p>
-        </div>
-      </div>
-    </section>
-
     <section id="reviews" class="section soft" aria-labelledby="reviews-title">
       <div class="container">
         <div class="section-head center">
@@ -1263,42 +1289,55 @@
         <div class="reviews">
           <article class="review-card">
             <blockquote>
-              <p>שמחנו לקבל ליווי מקצועי וענייני בתהליך מציאת משרד חדש. לאורך הדרך הייתה הבנה מדויקת של הצרכים שלנו, זמינות גבוהה ותחושת ביטחון עד לסגירת העסקה.</p>
+              <p>שמחים להמליץ בחום על משרד התיווך שליווה אותנו בתהליך מציאת משרד חדש.
+לאורך כל הדרך קיבלנו שירות מקצועי, ענייני וזמין, עם הבנה מדויקת של הצרכים שלנו וליווי צמוד עד לסגירת העסקה.
+התהליך התנהל ביעילות, בשקיפות ובתחושת ביטחון מלאה.
+ממליצים בחום לכל מי שמחפש ליווי אמין ומקצועי</p>
               <footer class="review-name">לקוח עסקי</footer>
             </blockquote>
           </article>
 
           <article class="review-card">
             <blockquote>
-              <p>קיבלנו שירות מקצועי, אדיב והוגן, כולל סיוע גם מעבר לתיווך עצמו. המשרד שנבחר ענה על הצרכים שלנו מעבר למצופה.</p>
+              <p>לכל הזקוקים לשירותי תיווך של נדל"ן ממליצה בחום על משרד מקצועי שירותי והוגן. רכש נכסים בהנהלתאלון כהן.
+קבלנו שירות מקצועי אדיב ובמחיר הוגן ומעל הכל סיוע בכל דבר ועניין שבקשנו מעבר לתיווך. המשרד שסגרנו עם אלון וליזי עונה לצרכים שלנו מעבר למצופה. רכשנו חבר בעסקה זו
+ממליצה בחום</p>
               <footer class="review-name">לקוחה מרוצה</footer>
             </blockquote>
           </article>
 
           <article class="review-card">
             <blockquote>
-              <p>אני עובד עם רכש נכסים מעל עשרים שנה. בכל עסקה קיבלתי יחס אישי, מקצועיות ותחושת ביטחון לאורך כל הדרך.</p>
+              <p>ממליץ בחום על שירותי התיווך של משרד רכש נכסים. אני עובד איתם מעל 20 שנה ומאז ומתמיד מטפלים בכל עסקה במקצועיות ונותנים יחס אישי ותחושת ביטחון לכל אורך הדרך, והתוצאות ללא פשרות !
+אם אתם מחפשים משרד תיווך אמין ומקצועי, אין ספק שזה המקום הנכון עבורכם!
+
+בהצלחה!</p>
               <footer class="review-name">לקוח ותיק</footer>
             </blockquote>
           </article>
 
           <article class="review-card">
             <blockquote>
-              <p>מזה מספר שנים אנו מסתייעים בשירותי התיווך של רכש נכסים, ובכל פעם מחדש נהנים מיחס אנושי, שירות מקצועי, אדיב וזמין.</p>
+              <p>מזה מספר שנים אנחנו מסתייעים בשירותי התיווך של אלון מ"רכש נכסים" ונהנים, בכל פעם מחדש, מיחס אנושי, משירות מקצועי, אדיב וזמין.
+לאורך כל תהליך העבודה אלון מלווה אותנו כלקוחות במסירות ובסבלנות רבה.</p>
               <footer class="review-name">חברה עסקית</footer>
             </blockquote>
           </article>
 
           <article class="review-card">
             <blockquote>
-              <p>אמינות בעסקה כלפי שני הצדדים תמיד עמדה בראש סדר העדיפויות. יודעים לקדם את העסקה ולהביא את הצדדים להסכמה גם כשיש פערים.</p>
+              <p>יהודה והבן שלו אלון, מעניקים שירות למופת, אמינות בעסקה כלפי שני הצדדים תמיד עמדה בראש סדר העדיפויות שלהם.
+דואגים לקדם את העסקה, ויודעים להביא את הצדדים להתגמשות המתאימה כדי לסגור עסקה, גם כשנראה שמגיעים למבוי סתום.
+כבר עשיתי איתם מספר עסקאות מוצלחות ובטוח שיהיו עוד כאלו בעתיד.</p>
               <footer class="review-name">בעל נכס</footer>
             </blockquote>
           </article>
 
           <article class="review-card">
             <blockquote>
-              <p>מקצועיים ואמינים מאוד. זו כבר עסקה חמישית שאני עושה איתם, ואני מרוצה מאוד מהשירות ומהעזרה לאורך כל הדרך.</p>
+              <p>מקצועיים ואמינים מאד!
+עסקה חמישית שאני עושה איתם ומאד מרוצה.
+תודה על שירות מעולה ועזרה לאורך כל הדרך!</p>
               <footer class="review-name">לקוח חוזר</footer>
             </blockquote>
           </article>
@@ -1338,8 +1377,13 @@
           </details>
 
           <details class="faq-item">
-            <summary>האם רכש נכסים מלווה גם בעלי נכסים?</summary>
-            <p>כן. רכש נכסים מלווה בעלי נכסים בתהליכי השכרה, מכירה, שיווק נכסים מסחריים, איתור שוכרים מתאימים וניהול תהליך העסקה בצורה מקצועית ומסודרת.</p>
+            <summary>איך יודעים איזה נכס מסחרי מתאים לעסק?</summary>
+            <p>מתחילים בהגדרת צרכים ברורה: סוג הפעילות, גודל השטח, תקציב, גישה, חניה, פריקה וטעינה, קהל יעד, מספר עובדים ותוכניות התפתחות. לאחר מכן בוחנים נכסים מתאימים לפי הנתונים בפועל.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>האם ניתן לקבל ליווי גם בתהליך משא ומתן?</summary>
+            <p>כן. רכש נכסים מלווה את הלקוח גם בשלבי המשא ומתן, בתיאום הציפיות מול הצדדים ובקידום התהליך עד לסגירת העסקה.</p>
           </details>
         </div>
       </div>
@@ -1403,7 +1447,7 @@
         <section class="footer-col" aria-labelledby="footer-privacy-title">
           <h3 id="footer-privacy-title">פרטיות ונגישות</h3>
           <p>
-            אנו מכבדים את פרטיות המשתמשים באתר זה. דף הנחיתה אינו כולל טפסי השארת פרטים ואינו אוסף מידע אישי באופן ישיר. ייתכן ונעשה שימוש בכלי סטטיסטיקה וניתוח תנועה כגון cookies לצורך שיפור חוויית המשתמש.
+            אנו מכבדים את פרטיות המשתמשים באתר זה. דף הנחיתה מציג מידע ודרכי התקשרות בלבד. ייתכן ונעשה שימוש בכלי סטטיסטיקה וניתוח תנועה כגון cookies לצורך שיפור חוויית המשתמש.
           </p>
         </section>
       </div>
@@ -1449,14 +1493,14 @@
     navToggle.addEventListener('click', () => {
       const isOpen = mainNav.classList.toggle('is-open');
       navToggle.setAttribute('aria-expanded', String(isOpen));
-      document.body.classList.toggle('no-scroll', isOpen);
+      document.body.classList.toggle('menu-open', isOpen);
     });
 
     navLinks.forEach((link) => {
       link.addEventListener('click', () => {
         mainNav.classList.remove('is-open');
         navToggle.setAttribute('aria-expanded', 'false');
-        document.body.classList.remove('no-scroll');
+        document.body.classList.remove('menu-open');
       });
     });
 
@@ -1464,7 +1508,7 @@
       if (event.key === 'Escape') {
         mainNav.classList.remove('is-open');
         navToggle.setAttribute('aria-expanded', 'false');
-        document.body.classList.remove('no-scroll');
+        document.body.classList.remove('menu-open');
       }
     });
   </script>
